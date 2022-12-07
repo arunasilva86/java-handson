@@ -1,13 +1,13 @@
 package com.learn.example.reactive;
 
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 
 import java.util.LinkedList;
 
 public class FluxTest {
 
-    @Test
+//    @Test
     public void testBasic () {
 
         LinkedList<String> stringLinkedList = new LinkedList<>();
