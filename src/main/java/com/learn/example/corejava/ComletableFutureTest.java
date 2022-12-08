@@ -2,7 +2,7 @@ package com.learn.example.corejava;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ComletableFuureTest {
+public class ComletableFutureTest {
     public static void main (String []  args) throws InterruptedException {
         System.out.println("Main : " + Thread.currentThread().getName());
         CompletableFuture.supplyAsync(() -> String.valueOf(10))
