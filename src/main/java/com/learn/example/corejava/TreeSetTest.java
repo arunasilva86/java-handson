@@ -11,7 +11,6 @@ public class TreeSetTest {
         Student student3 = new Student("Sanjaya", 40);
         Student student4 = new Student("Romesh", 30);
 
-
         List<Student> studentList = new ArrayList(List.of(student1, student2, student3, student4));
 //
         Comparator<Student> studentNameComparator = (o1, o2) -> o1.getName().compareTo(o2.getName());
@@ -23,11 +22,9 @@ public class TreeSetTest {
         studentTreeSet.addAll(studentList);
         studentTreeSet.stream().forEach(student -> System.out.println(student.getName()));
 
-
 //        studentList.stream().forEach(student -> System.out.println(student.getName()));
 
     }
-
 }
 
 
