@@ -1,4 +1,4 @@
-package com.learn.example;
+package com.learn.example.algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
