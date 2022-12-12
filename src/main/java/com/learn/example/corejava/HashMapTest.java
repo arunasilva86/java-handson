@@ -1,8 +1,6 @@
 package com.learn.example.corejava;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class HashMapTest {
 
@@ -13,7 +11,6 @@ public class HashMapTest {
 
         Integer age = personMap.get(new Person("Aruna", 30));
         System.out.println("Age is : " + age.intValue());
-
 
     }
 }
