@@ -12,7 +12,13 @@ public class LinkedListTest {
                 new Person("zzzz", 10),
                 new Person("pppp", 70)));
         int size = personList.size();
+
+        // LinkedList list behavior
+        System.out.println("Person at dynamic index 2 = " + personList.get(2).getName());
+
         for (int x = 0; x < size; x++) {
+
+            // linked list's queue behavior
             System.out.println(personList.poll().getName() + " New size = " + personList.size());
         }
     }

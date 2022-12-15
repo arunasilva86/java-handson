@@ -11,19 +11,6 @@ public class HashMapTest {
 
         Integer age = personMap.get(new Person("Aruna", 30));
         System.out.println("Age is : " + age.intValue());
-
-        List<Person> personList = new LinkedList<>(List.of(new Person("Aruna", 30)));
-
-        Person person = personList.get(0);
-//        System.out.println("Person Name : " + person.getName());
-
-        Stack<Person> personStack = new Stack<>();
-        personStack.add(new Person("Aruna", 30));
-        personStack.add(new Person("Ishara", 20));
-        personStack.add(new Person("Aganya", 10));
-        System.out.println("Person Name is : " + personStack.get(1).getName());
-
-
     }
 }
 
