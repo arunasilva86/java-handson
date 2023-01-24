@@ -12,9 +12,9 @@ public class PriorityQueueTest {
 
         personPriorityQueue.add(new Person("aaa", 40));
         personPriorityQueue.add(new Person("bbb", 30));
-        personPriorityQueue.add(new Person("ccc", 60));
+        personPriorityQueue.add(new Person("ccc", 50));
         personPriorityQueue.add(new Person("ddd", 10));
-        personPriorityQueue.add(new Person("eee", 80));
+        personPriorityQueue.add(new Person("eee", 60));
         personPriorityQueue.add(new Person("fff", 20));
 
         // first element will always be the sorted (smallest) element
@@ -24,8 +24,8 @@ public class PriorityQueueTest {
         System.out.println("All elements in the queue : " + personPriorityQueue);
 
         //  But at the retrieval time sorted item (head) will be returned all the time
-        int sie = personPriorityQueue.size();
-        for (int x = 0; x < sie; x++) {
+        int size = personPriorityQueue.size();
+        for (int x = 0; x < size; x++) {
             System.out.println("Element retrieved : " + personPriorityQueue.poll());
         }
 

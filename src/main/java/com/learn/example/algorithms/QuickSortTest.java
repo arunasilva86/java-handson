@@ -17,13 +17,13 @@ public class QuickSortTest {
                 new Student("Niru", 61),
                 new Student("Inoshika", 21));
         List<Student> studentList = new ArrayList<>(studentListImmutable);
-        quickSort(studentList, 0, studentList.size() -1, 0);
+        quickSort(studentList, 0, studentList.size() - 1, 0);
         studentList.stream().forEach(student -> System.out.println(student.getName() + " " + student.getAge()));
 
     }
 
-    private static void quickSort (List<Student> studentList, int startIndex, int endIndex,int positionIndex) {
-        if (startIndex == endIndex) {
+    private static void quickSort(List<Student> studentList, int startIndex, int endIndex, int positionIndex) {
+        if (startIndex >= endIndex) {
             return;
         }
         Student pivotStudent = studentList.get(endIndex);
@@ -35,12 +35,9 @@ public class QuickSortTest {
         }
 
         Collections.swap(studentList, positionIndex, endIndex);
-        if (startIndex < positionIndex) {
-            quickSort(studentList, startIndex, positionIndex -1, startIndex);
-        }
-        if (positionIndex < endIndex) {
-            quickSort(studentList, positionIndex + 1, endIndex, positionIndex + 1);
-        }
+
+        quickSort(studentList, startIndex, positionIndex - 1, startIndex); // left half
+        quickSort(studentList, positionIndex + 1, endIndex, positionIndex + 1); // right half of the same left half
     }
 
 }
