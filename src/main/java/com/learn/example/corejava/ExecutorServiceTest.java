@@ -5,8 +5,8 @@ import java.util.concurrent.*;
 public class ExecutorServiceTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        singleThreadExecutorExample();
-//        scheduledThreadExecutorExample();
-        callableExample();
+        scheduledThreadExecutorExample();
+//        callableExample();
 
     }
 
@@ -20,7 +20,7 @@ public class ExecutorServiceTest {
     }
 
     private static void scheduledThreadExecutorExample() {
-        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(2);
         Runnable runnable_1 = () -> {
             System.out.println("task -1 started");
             try {
@@ -34,13 +34,13 @@ public class ExecutorServiceTest {
                 () -> {
                     System.out.println("task -2 started");
                     try {
-                        Thread.sleep(15000);
+                        Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     System.out.println("task -2 completed");
                 };
-        scheduledExecutorService.schedule(runnable_1, 10, TimeUnit.SECONDS);
+        scheduledExecutorService.schedule(runnable_1, 6, TimeUnit.SECONDS);
         scheduledExecutorService.schedule(runnable_2, 5, TimeUnit.SECONDS);
         scheduledExecutorService.shutdown();
     }
