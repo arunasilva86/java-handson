@@ -1,5 +1,7 @@
 package com.learn.example.corejava;
 
+import com.learn.example.common.Student;
+
 import java.util.*;
 
 public class TreeSetTest {
@@ -18,7 +20,7 @@ public class TreeSetTest {
 //
 //        Collections.sort(studentList, studentAgeComparator);
 
-        TreeSet<Student> studentTreeSet = new TreeSet<>(studentAgeComparator);
+        TreeSet<Student> studentTreeSet = new TreeSet<>(studentNameComparator);
         studentTreeSet.addAll(studentList);
         studentTreeSet.stream().forEach(student -> System.out.println(student.getName()));
 
@@ -29,20 +31,4 @@ public class TreeSetTest {
 
 
 
-class Student {
-    private String name;
-    private int age;
 
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-}

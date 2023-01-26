@@ -1,8 +1,18 @@
 package com.learn.example.recursion;
 
+import java.util.Arrays;
+import java.util.TreeSet;
+
 public class BinarySearch {
     public static void main(String[] args) {
         int [] numbers = new int [] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+
+//  Using utill methos from java
+        TreeSet<Integer> integerTreeSet = new TreeSet<>();
+        System.out.println(" Index is : " + Arrays.binarySearch(numbers, 7));
+
+
+//  Using my own algorithm
         System.out.println("Result is " + isValueContain(numbers, 3, 0, numbers.length-1));
     }
     public static boolean isValueContain (int [] numArray, int number, int startIndex, int endIndex) {
