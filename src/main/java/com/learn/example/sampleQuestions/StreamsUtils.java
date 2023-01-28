@@ -1,5 +1,6 @@
 package com.learn.example.sampleQuestions;
 
+import com.learn.example.common.ClassRoom;
 import com.learn.example.common.Student;
 
 import java.util.Arrays;
@@ -10,17 +11,35 @@ public class StreamsUtils {
 
 //  Sum of the ages of a list of students
 //  Min / Max / Average / Count are also same
+        System.out.println("--------------------------------------------- TEST-1 ---------------------------------------------");
         List<Student> studentList_1 = Arrays.asList(new Student("Aruna", 36), new Student("Ishara", 33), new Student("Romesh", 39));
         int ageSum = studentList_1.stream().mapToInt(Student::getAge).sum();
         System.out.println("Age SUm is : " + ageSum);
 
 // Sort a List with Stream
+        System.out.println("--------------------------------------------- TEST-2 ---------------------------------------------");
         List<Student> studentList_2 = Arrays.asList(new Student("Romesh", 39), new Student("Ishara", 33), new Student("Aruna", 36));
         studentList_2.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).forEach(System.out::println);
 
+// Sort a distinct List with Stream
+        System.out.println("--------------------------------------------- TEST-3 ---------------------------------------------");
+        List<Student> studentList_3 = Arrays.asList(new Student("Aruna", 36), new Student("Ishara", 33), new Student("Aruna", 36));
+        studentList_3.stream().distinct().forEach(System.out::println);
+
+// Flatmap
+        System.out.println("--------------------------------------------- TEST-4 ---------------------------------------------");
+        List<Student> studentList_4_1 = Arrays.asList(new Student("Aruna", 36), new Student("Ishara", 33));
+        List<Student> studentList_4_2 = Arrays.asList(new Student("Sanjaya", 42), new Student("Romesh", 39));
+        List<ClassRoom> classRooms = Arrays.asList(new ClassRoom(studentList_4_1), new ClassRoom(studentList_4_2));
+        int ageSum_4 = classRooms.stream()
+                .map(ClassRoom::getStudents)
+                .flatMap(students -> students.stream())
+                .filter(student -> student.getAge() < 40)
+                .mapToInt(student -> student.getAge())
+                .sum();
+        System.out.println("Age sum : " + ageSum_4);
 
 
-        
 
 
     }
