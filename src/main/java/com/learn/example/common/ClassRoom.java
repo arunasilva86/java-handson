@@ -4,13 +4,13 @@ import java.util.List;
 
 public class ClassRoom {
 
-    private List<Student> students;
+    private List<Student> studentList;
 
     public ClassRoom(List<Student> students) {
-        this.students = students;
+        this.studentList = students;
     }
 
-    public List<Student> getStudents() {
-        return students;
+    public List<Student> getStudentList() {
+        return studentList;
     }
 }
