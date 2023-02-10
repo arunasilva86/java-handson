@@ -1,4 +1,4 @@
-package com.learn.example.JavaUtilFunctions;
+package com.learn.example.jdkutils;
 
 public class StringUtils {
 

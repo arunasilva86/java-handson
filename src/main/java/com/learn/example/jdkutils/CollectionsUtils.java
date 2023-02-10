@@ -1,4 +1,4 @@
-package com.learn.example.JavaUtilFunctions;
+package com.learn.example.jdkutils;
 
 import com.learn.example.common.Student;
 
