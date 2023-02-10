@@ -1,4 +1,4 @@
-package com.learn.example.wise;
+package com.learn.example.sampleQuestions;
 
 import java.util.*;
 

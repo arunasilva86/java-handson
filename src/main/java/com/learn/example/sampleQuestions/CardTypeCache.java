@@ -1,6 +1,6 @@
-package com.learn.example.adyen;
+package com.learn.example.sampleQuestions;
 
-public class Test {
+public class CardTypeCache {
 
  /*   public static CardTypeCache buildCache(List<BinRange> binRanges) {
         Map<Predicate<String>, String> types = new HashMap<>();
