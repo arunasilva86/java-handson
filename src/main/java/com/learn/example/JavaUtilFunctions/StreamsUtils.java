@@ -1,11 +1,10 @@
-package com.learn.example.sampleQuestions;
+package com.learn.example.JavaUtilFunctions;
 
 import com.learn.example.common.ClassRoom;
 import com.learn.example.common.Student;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 public class StreamsUtils {
     public static void main(String[] args) {

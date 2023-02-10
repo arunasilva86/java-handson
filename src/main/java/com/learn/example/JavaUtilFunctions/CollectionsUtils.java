@@ -1,4 +1,4 @@
-package com.learn.example.sampleQuestions;
+package com.learn.example.JavaUtilFunctions;
 
 import com.learn.example.common.Student;
 

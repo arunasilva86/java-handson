@@ -1,4 +1,4 @@
-package com.learn.example.sampleQuestions;
+package com.learn.example.JavaUtilFunctions;
 
 public class StringUtils {
 

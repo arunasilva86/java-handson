@@ -1,10 +1,9 @@
-package com.learn.example.sampleQuestions;
+package com.learn.example.JavaUtilFunctions;
 
 
 import com.learn.example.common.Student;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class ArraysUtils {
