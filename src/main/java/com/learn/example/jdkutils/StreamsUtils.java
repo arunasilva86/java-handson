@@ -4,6 +4,7 @@ import com.learn.example.common.ClassRoom;
 import com.learn.example.common.Student;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class StreamsUtils {
@@ -21,7 +22,7 @@ public class StreamsUtils {
         List<Student> studentList_2 = Arrays.asList(new Student("Romesh", 39), new Student("Ishara", 33), new Student("Aruna", 36));
         studentList_2.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).forEach(System.out::println);
 
-// Sort a distinct List with Stream
+// Get a distinct List with Stream
         System.out.println("--------------------------------------------- TEST-3 ---------------------------------------------");
         List<Student> studentList_3 = Arrays.asList(new Student("Aruna", 36), new Student("Ishara", 33), new Student("Aruna", 36));
         studentList_3.stream().distinct().forEach(System.out::println);

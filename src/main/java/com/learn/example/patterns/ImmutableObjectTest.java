@@ -14,6 +14,8 @@ public final class ImmutableObjectTest {              // class need to be final
         this.tyres = tyreList;
     }
 
+    // Should not provide any setters
+
     public String getMake() {
         return make;                            // Can return immutable type fields directly
     }

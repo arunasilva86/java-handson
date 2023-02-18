@@ -4,12 +4,14 @@ package com.learn.example.jdkutils;
 import com.learn.example.common.Student;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class ArraysUtils {
     public static void main(String[] args) {
 
-// 1 Sort a primitive array
+// 1 Sort a primitive or Comparable object array
         System.out.println("--------------------------------------------- TEST-1 ---------------------------------------------");
         int[] ints_1 = new int [] {3, 4, 7, 1, 6, 4};
         Arrays.sort(ints_1);
@@ -21,7 +23,7 @@ public class ArraysUtils {
         Arrays.sort(students_2, (s1, s2) -> s1.getName().compareTo(s2.getName()));
         Arrays.stream(students_2).map(Student::getName).forEach(System.out::println);
 
-// 3 Sort and Binary Search primitive array
+// 3 Sort and Binary Search primitive or Comparable object array
         System.out.println("--------------------------------------------- TEST-3 ---------------------------------------------");
         int[] ints_3 = new int [] {3, 4, 7, 1, 6, 4};
         Arrays.sort(ints_3);
