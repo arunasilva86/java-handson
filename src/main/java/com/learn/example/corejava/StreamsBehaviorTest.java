@@ -11,7 +11,7 @@ public class StreamsBehaviorTest {
                 .map(StreamsBehaviorTest::multiplyByHun)
                 .filter(StreamsBehaviorTest::isGreaterThan5)
                 .sorted((o1, o2) -> o1 - o2)
-                .mapToInt(Integer::new)
+                .mapToInt(Integer::valueOf)
                 .map(StreamsBehaviorTest::addOne)
                 .anyMatch(x -> x > 700);
     }
