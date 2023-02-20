@@ -2,16 +2,18 @@ package com.learn.example.samplequestions;
 
 
 /*
-* * For a given positive integer, N
-* * find the smallest integer grater than N which does not contain same digit in adjacent
-* * */
+* For a given positive integer, N
+* find the smallest integer grater than N which does not contain same digit in adjacent
+*
+* Eg 1 : if N = 276 then the result is : 278
+* Eg 2 : if N = 109 then the result is : 120
+* Eg 3 : if N = 1111111 then the result is : 1201010
+* Eg 4 : if N = 522199563 then the result is : 523010101 *
+*/
 public class NextMaxIntWithNoSameInAdjacent {
     public static void main(String[] args) {
 
         int n = 522199563; // 523010101
-//        int n = 276; // 278
-//        int n = 109; // 120
-//        int n = 1111111; // 1201010
         System.out.println("Value is :" + minNumberWithNoCons(n));
     }
 
