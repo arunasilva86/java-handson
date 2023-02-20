@@ -15,8 +15,7 @@ public class MaxContiguousSum {
     }
 
     public static long doSomething(List<Integer> pnl, int k) {
-
-        // Write your code here
+        
         long maxFound = 0;
         for (int count = 1; count <= k; count++) {
             long previousSum = 0;
