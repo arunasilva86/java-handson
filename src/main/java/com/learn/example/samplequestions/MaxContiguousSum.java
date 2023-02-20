@@ -5,8 +5,8 @@ import java.util.List;
 /*
  * Find the max sum of the n consecutive values of a given array where n can be any integer value less than or equals a given integer k
  *
- * Ex 1 : {5, -2, 15, -4, 6, 1, } and k = 3 then max sum is 18, as (5 + (-2) + 15) = 18
- * Ex 2 : {-1, -1, -1, 200, 300, -1, -1} and k = 4 then max sum is 500, as (200 + 300) = 500
+ * Ex 1 : {5, -2, 15, -4, 6, 1, } and k = 3 then max sum is 18, as (5 + (-2) + 15) = 18 // max gives at n=3, (=k)
+ * Ex 2 : {-1, -1, -1, 200, 300, -1, -1} and k = 4 then max sum is 500, as (200 + 300) = 500 // max gives at n=2, (<k)
  */
 public class MaxContiguousSum {
     public static void main(String[] args) {
