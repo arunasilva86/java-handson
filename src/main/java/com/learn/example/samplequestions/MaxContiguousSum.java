@@ -11,11 +11,11 @@ import java.util.List;
 public class MaxContiguousSum {
     public static void main(String[] args) {
         List<Integer> integerList = List.of(5, -2, 15, -4, 9, 1);
-        System.out.println("Returned is : " + doSomething(integerList, 3));
+        System.out.println("Returned is : " + getMaxContiguousSum(integerList, 3));
     }
 
-    public static long doSomething(List<Integer> pnl, int k) {
-        
+    public static long getMaxContiguousSum(List<Integer> pnl, int k) {
+
         long maxFound = 0;
         for (int count = 1; count <= k; count++) {
             long previousSum = 0;
