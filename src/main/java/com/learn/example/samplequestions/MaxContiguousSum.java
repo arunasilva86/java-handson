@@ -42,15 +42,9 @@ public class MaxContiguousSum {
 
     private static long getSumOfRange(List<Integer> pnl, int start, int end) {
         long sum = 0;
-        for (int x = start; x < pnl.size(); x++) {
-            if (x >= start && x <= end) {
-                sum = sum + pnl.get(x);
-            }
-            if (x > end) {
-                return sum;
-            }
+        for (int x = start; x <= end; x++) {
+            sum = sum + pnl.get(x);
         }
         return sum;
-
     }
 }
