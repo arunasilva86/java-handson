@@ -5,7 +5,7 @@ import reactor.core.publisher.FluxSink;
 
 import java.util.function.Consumer;
 
-public class FluxSinkDemo {
+public class FluxCreateDemo {
 
     private static NameProducer nameProducer = new NameProducer();
 
