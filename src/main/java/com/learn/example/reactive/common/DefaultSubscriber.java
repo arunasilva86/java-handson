@@ -13,7 +13,7 @@ public class DefaultSubscriber implements Subscriber<Object> {
 
     @Override
     public void onNext(Object o) {
-        System.out.println(" Received : " + o);
+        System.out.println("Received : " + o);
     }
 
 
@@ -25,6 +25,6 @@ public class DefaultSubscriber implements Subscriber<Object> {
 
     @Override
     public void onComplete() {
-        System.out.println("Received COMPLETED");
+        System.out.println("COMPLETE Received");
     }
 }
