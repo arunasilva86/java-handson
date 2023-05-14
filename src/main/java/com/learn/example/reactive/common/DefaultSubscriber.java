@@ -1,10 +1,18 @@
 package com.learn.example.reactive.common;
 
-
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
 public class DefaultSubscriber implements Subscriber<Object> {
+
+    private String name = "";
+
+    public DefaultSubscriber(String name) {
+        this.name = name;
+    }
+
+    public DefaultSubscriber() {
+    }
 
     @Override
     public void onSubscribe(Subscription s) {
@@ -13,18 +21,18 @@ public class DefaultSubscriber implements Subscriber<Object> {
 
     @Override
     public void onNext(Object o) {
-        System.out.println("Received : " + o);
+        System.out.println(name + " Received : " + o);
     }
 
 
     @Override
     public void onError(Throwable t) {
-        System.out.println("ERROR Received : " + t.getMessage());
+        System.out.println(name + " ERROR Received : " + t.getMessage());
 
     }
 
     @Override
     public void onComplete() {
-        System.out.println("COMPLETE Received");
+        System.out.println(name + " COMPLETE Received");
     }
 }
