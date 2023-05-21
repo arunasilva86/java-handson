@@ -4,11 +4,17 @@ import com.learn.example.reactive.common.DefaultSubscriber;
 import net.datafaker.Faker;
 import net.datafaker.sequence.FakeCollection;
 import reactor.core.publisher.Flux;
+import reactor.core.scheduler.Schedulers;
 
 public class HandleDemo {
     public static void main(String[] args) {
         Flux flux = Flux.range(1, 10)
-                .map(x -> x * 10)
+                .map(x -> {
+                    System.out.println("Handling thread is  : " + Thread.currentThread().getName());
+                    return x * 10;
+                })
+
+                .subscribeOn(Schedulers.boundedElastic())
                 .handle((integer, synchronousSink) -> {
 
                     // Emit integer when integer > 30 and complete when > 70
@@ -19,7 +25,8 @@ public class HandleDemo {
                     }
                 });
 
-        flux.subscribe(new DefaultSubscriber());
+        flux.subscribe(new DefaultSubscriber("xxx"));
+        flux.subscribe(new DefaultSubscriber("yyy"));
 
         System.out.println("------------------canada example with handle");
 
