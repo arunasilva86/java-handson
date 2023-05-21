@@ -14,6 +14,7 @@ public class BackPreasureDropDemo {
         1. queue open
         2. take items until it fill 100 % of its size (20 in this case)
         3. queue closed and drop until any items' comes until it open again
+            option is there to run some function on items being dropped and persist/serialize them so that they can be processed later
         4. queue will be opened when its finished consuming 75% of its full size. (in this case after consuming 15th element)
         5. start queuing elements get emits this point onwards until it ful 100 %
         6. continue from step 3
