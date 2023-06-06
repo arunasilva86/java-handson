@@ -16,4 +16,9 @@ public class Util {
             e.printStackTrace();
         }
     }
+
+    public static void printThreadName(Object i) {
+        System.out.println(i + " " + Thread.currentThread().getName());
+
+    }
 }

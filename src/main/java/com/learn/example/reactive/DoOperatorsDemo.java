@@ -1,6 +1,7 @@
 package com.learn.example.reactive;
 
 import com.learn.example.reactive.common.DefaultSubscriber;
+import com.learn.example.reactive.common.Util;
 import reactor.core.publisher.Flux;
 
 public class DoOperatorsDemo {
@@ -16,6 +17,7 @@ public class DoOperatorsDemo {
         })
                 .doOnNext(o -> System.out.println("doOnNext-1"))
                 .doOnNext(o -> System.out.println("doOnNext-2"))
+                .doOnNext(o -> Util.sleepSec(2))
                 .doOnComplete(() -> System.out.println("doOnComplete-1"))
                 .doOnComplete(() -> System.out.println("doOnComplete-2"))
                 .doOnRequest(value -> System.out.println("doOnRequest-1"))
@@ -23,6 +25,8 @@ public class DoOperatorsDemo {
                 .doOnSubscribe(o -> System.out.println("doOnSubscribe-1"))
                 .doOnSubscribe(o -> System.out.println("doOnSubscribe-2"))
         .subscribe(new DefaultSubscriber());
+
+        System.out.println("Final sout.....");
 
     }
 }

@@ -19,8 +19,16 @@ public class GroupedByDemo {
     }
 
     public static void processGroupedFlux (Flux<Integer> flux, int key) {
-        System.out.println("Called .. ");
-        flux.subscribe(integer -> System.out.println("Key : " + key + ", Item : " + integer));
-
+        System.out.println("Called .. "); // This line willbe called once per each group
+        switch (key) {
+            case 0 : {
+                flux.subscribe(integer -> System.out.println("I'm an Even Number .. " + "Key : " + key + ", Item : " + integer));
+                break;
+            }
+            case 1 :  {
+                flux.subscribe(integer -> System.out.println("I'm an Odd Number .. " + "Key : " + key + ", Item : " + integer));
+                break;
+            }
+        }
     }
 }
