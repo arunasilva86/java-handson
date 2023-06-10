@@ -15,7 +15,19 @@ public class FluxCreateDemo {
 
         // somewhere else in the code flow
         nameProducer.produceData();
+
+
+        Flux flux = Flux.create(fluxSink -> {
+            fluxSink.next(2);
+            fluxSink.next(10);
+            fluxSink.complete();
+
+        });
+
+
+
     }
+
 }
 
 class NameProducer implements Consumer<FluxSink<String>> {

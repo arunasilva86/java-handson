@@ -24,7 +24,7 @@ public class SinksManyDemo {
         integerFlux
                 .publishOn(Schedulers.boundedElastic()) // Each subscriber can decide processing thread model of it
                 .doOnNext(integer -> Util.printThreadName(integer + " Ishara "))
-                .subscribe(new DefaultSubscriber("Ishara"));
+                .subscribe(new DefaultSubscriber("Ishara")); // if unicast() is used Ishara will get an ERROR signal
 
         intSinks.tryEmitNext(40); // Ishara eceive only 40, 50 60. While Aruna receive all
         intSinks.tryEmitNext(50);
