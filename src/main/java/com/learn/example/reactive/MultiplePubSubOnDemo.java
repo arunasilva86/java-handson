@@ -15,19 +15,19 @@ public class MultiplePubSubOnDemo {
                     }
                     fluxSink.complete();
                 })
-                .doOnNext(i -> Util.printThreadName(i + " doOnNext 1 : "))
+                .doOnNext(i -> Util.printThreadName(i + " doOnNext A : "))
                 .subscribeOn(Schedulers.boundedElastic())
-                .doOnNext(i -> Util.printThreadName(i + " doOnNext 2 : ")) // upto to this point wo from publisher, work is done by the thread defined in line 18 (when multiple subscribe on --> closest one to the publisher become relavent untill we found the first publishOn)
+                .doOnNext(i -> Util.printThreadName(i + " doOnNext B : ")) // upto to this point wo from publisher, work is done by the thread defined in line 18 (when multiple subscribe on --> closest one to the publisher become relavent untill we found the first publishOn)
                 .publishOn(Schedulers.boundedElastic())
-                .doOnNext(i -> Util.printThreadName(i + " doOnNext 3 : ")); // doOnNext 3 and doOnNext 4 done by thread defined in line 19, publishOn effect on down stream
+                .doOnNext(i -> Util.printThreadName(i + " doOnNext C : ")); // doOnNext C and doOnNext D done by thread defined in line 19, publishOn effect on down stream
 
 
         flux
-                .doOnNext(i -> Util.printThreadName(i + " doOnNext 4 : "))
+                .doOnNext(i -> Util.printThreadName(i + " doOnNext D : "))
                 .subscribeOn(Schedulers.boundedElastic())
                 .doFirst(() -> Util.printThreadName(" doFirst 1 : "))
                 .publishOn(Schedulers.boundedElastic())
-                .doOnNext(i -> Util.printThreadName(i + " doOnNext 5 : ")) // doOnNext 5 and subscribe consumer done by thread defined in line 26
+                .doOnNext(i -> Util.printThreadName(i + " doOnNext E : ")) // doOnNext E and subscribe consumer done by thread defined in line 26
                 .doFirst(() -> Util.printThreadName(" doFirst 2 : "))
                 .subscribe(i -> Util.printThreadName(i + " subscribe : "));
 
