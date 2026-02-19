@@ -16,6 +16,7 @@ public class ExecutorServiceTest {
         Future<String> stringFuture = executorService.submit(callable);
         String s = stringFuture.get();
         System.out.println(s);
+
         executorService.shutdown();
     }
 
