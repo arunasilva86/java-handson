@@ -13,14 +13,14 @@ public class BinarySearch {
 
 
 //  Using my own algorithm
-        System.out.println("Result is " + isValueContain(numbers, 3, 0, numbers.length-1));
+        System.out.println("Result is " + isValueContain(numbers, 13, 0, numbers.length-1));
     }
-    public static boolean isValueContain (int [] numArray, int number, int startIndex, int endIndex) {
+    public static int  isValueContain (int [] numArray, int number, int startIndex, int endIndex) {
         int midIndex = (startIndex + endIndex) / 2;
         if (numArray[midIndex] == number) {
-            return true;
+            return midIndex;
         } else if (startIndex == endIndex) {
-            return false;
+            return -1;
         }
         else if (number < numArray[midIndex]) {
             return isValueContain(numArray, number, startIndex, midIndex -1 );

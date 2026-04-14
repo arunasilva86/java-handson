@@ -15,11 +15,14 @@ public class StreamsUtils {
         System.out.println("--------------------------------------------- TEST-1 ---------------------------------------------");
         List<Student> studentList_1 = Arrays.asList(new Student("Aruna", 36), new Student("Ishara", 33), new Student("Romesh", 39));
         int ageSum = studentList_1.stream().mapToInt(Student::getAge).sum();
-        System.out.println("Age SUm is : " + ageSum);
+        double ageAvg = studentList_1.stream().mapToInt(Student::getAge).average().orElse(0);
+        System.out.println("Age Sum is : " + ageSum);
+        System.out.println("Age Avg is : " + ageAvg);
 
 // Sort a List with Stream
         System.out.println("--------------------------------------------- TEST-2 ---------------------------------------------");
         List<Student> studentList_2 = Arrays.asList(new Student("Romesh", 39), new Student("Ishara", 33), new Student("Aruna", 36));
+        studentList_2.stream().sorted((st1, st2) -> Integer.compare(st1.getAge(), st2.getAge())).forEach(st -> System.out.println(st.getName()));
         studentList_2.stream().sorted((o1, o2) -> o1.getName().compareTo(o2.getName())).forEach(System.out::println);
 
 // Get a distinct List with Stream

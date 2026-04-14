@@ -8,7 +8,7 @@ import java.util.List;
  * Ex 1 : {5, -2, 15, -4, 9, 1} and k = 3 then max sum is 20, as (15 + (-4) + 9) = 20 // max gives at n=3, (=k)
  * Ex 2 : {-1, -1, -1, 200, 300, -1, -1} and k = 4 then max sum is 500, as (200 + 300) = 500 // max gives at n=2, (<k)
  */
-public class MaxContiguousSum {
+public class  MaxContiguousSum {
     public static void main(String[] args) {
         List<Integer> integerList = List.of(5, -2, 15, -4, 9, 1);
         System.out.println("Returned is : " + getMaxContiguousSum(integerList, 3));

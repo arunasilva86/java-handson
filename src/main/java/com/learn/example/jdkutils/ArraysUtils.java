@@ -20,7 +20,7 @@ public class ArraysUtils {
 // 2 Sort object array  with a comparator
         System.out.println("--------------------------------------------- TEST-2 ---------------------------------------------");
         Student[] students_2 = new Student[] {new Student("Aruna", 36), new Student("Ishara", 33), new Student("Romesh", 39)};
-        Arrays.sort(students_2, (s1, s2) -> s1.getName().compareTo(s2.getName()));
+        Arrays.sort(students_2, (s1, s2) -> Integer.compare(s1.getAge(), s2.getAge()));
         Arrays.stream(students_2).map(Student::getName).forEach(System.out::println);
 
 // 3 Sort and Binary Search primitive or Comparable object array

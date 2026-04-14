@@ -28,7 +28,7 @@ public class CollectionsUtils {
         System.out.println("--------------------------------------------- TEST-3 ---------------------------------------------");
         List<Student> studentList_3 = Arrays.asList(new Student("Aruna", 36), new Student("Ishara", 33), new Student("Romesh", 39));
         Collections.swap(studentList_3, 1, 2);
-        System.out.println("Student at 1st index is : " + studentList_3.get(1).getName());
+        System.out.println("Student at index = 1 is : " + studentList_3.get(1).getName());
 
     }
 }

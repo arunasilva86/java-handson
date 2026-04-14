@@ -2,7 +2,8 @@ package com.learn.example.recursion;
 
 public class DecimalToBinary {
     public static void main(String[] args) {
-        System.out.println(devideByTwo(1100, ""));
+        int number = 13;
+        System.out.println("binary representation of " + number + " is " + devideByTwo(number, ""));
     }
 
     public static String devideByTwo (int number, String result) {
